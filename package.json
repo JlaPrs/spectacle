@@ -13,8 +13,8 @@
     "prettier-fix": "npm run prettier -- --write",
     "deploy": "",
     "rollup": "rollup -c config/rollup.config.js",
-    "start-dev-server": "yarn rollup --watch --open --port=3000",
-    "start": "NODE_ENV=development yarn start-dev-server",
+    "dev-server": "yarn rollup --watch --open --port=3000",
+    "start": "NODE_ENV=development yarn dev-server",
     "build": "NODE_ENV=production yarn rollup",
     "test": "jest --verbose",
     "check": ""
