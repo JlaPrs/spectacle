@@ -11,7 +11,7 @@ Spectacle NOTE: This syntax theme was modified to work with react-live and emoti
 
 export default css`
   background: #2a2734;
-  color: #9a86fd;
+  color: #2b2b2b;
 
   & .token.comment,
   & .token.prolog,

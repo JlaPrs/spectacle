@@ -1,0 +1,64 @@
+@mixin ci-font($font: (font: $ci-font-base)) {
+    margin: 0;
+
+    $fontFamily: $ci-font-base;
+    @if (map-has-key($font, "font")) {
+        $fontFamily: map-get($font, "font");
+    }
+
+    font-family: $fontFamily;
+    font-weight: normal;
+
+    @if (map-has-key($font, "size-xs")) {
+        font-size: map-get($font, "size-xs");
+    }
+    @if (map-has-key($font, "letter-spacing")) {
+        letter-spacing: map-get($font, "letter-spacing");
+    }
+    @if (map-has-key($font, "text-transform")) {
+        text-transform: map-get($font, "text-transform");
+    }
+    @if (map-has-key($font, "line-height")) {
+        line-height: map-get($font, "line-height");
+    }
+
+    @if (map-has-key($font, "size-sm")) {
+        @media (min-width: $screen-sm-min) {
+            font-size: map-get($font, "size-sm");
+        }
+    }
+
+    @if (map-has-key($font, "size-md")) {
+        @media (min-width: $screen-md-min) {
+            font-size: map-get($font, "size-md");
+        }
+    }
+
+    // min 960px
+    @if (map-has-key($font, "size-lg")) {
+        @media (min-width: $screen-lg-min) {
+            font-size: map-get($font, "size-lg");
+        }
+    }
+
+    // min 1024px
+    @if (map-has-key($font, "size-lg-05")) {
+        @media (min-width: $ci-screen-lg-05) {
+            font-size: map-get($font, "size-lg-05");
+        }
+    }
+
+    // min 1280px
+    @if (map-has-key($font, "size-lg-10")) {
+        @media (min-width: $ci-screen-lg-10) {
+            font-size: map-get($font, "size-lg-10");
+        }
+    }
+
+    // min 1520px
+    @if (map-has-key($font, "size-lg-20")) {
+        @media (min-width: $ci-screen-lg-20) {
+            font-size: map-get($font, "size-lg-20");
+        }
+    }
+}
